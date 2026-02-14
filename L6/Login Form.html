@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form with Input Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="time"],
+        input[type="range"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="range"] {
+            width: 100%;
+            padding: 0;
+        }
+        .radio-group,
+        .checkbox-group {
+            margin-top: 10px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .radio-item,
+        .checkbox-item {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Form - Input Types Demo</h1>
+    <form>
+        <!-- Text Input -->
+        <div class="form-group">
+            <label for="username">Text Input:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-group">
+            <label for="email">Email Input:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-group">
+            <label for="password">Password Input:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-group">
+            <label>Radio Buttons (Gender):</label>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" style="display: inline; font-weight: normal;">Male</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" style="display: inline; font-weight: normal;">Female</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other" style="display: inline; font-weight: normal;">Other</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="form-group">
+            <label>Checkboxes (Interests):</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="coding" name="interests" value="coding">
+                    <label for="coding" style="display: inline; font-weight: normal;">Coding</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="design" name="interests" value="design">
+                    <label for="design" style="display: inline; font-weight: normal;">Design</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music" style="display: inline; font-weight: normal;">Music</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Date Input -->
+        <div class="form-group">
+            <label for="dob">Date Input:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <!-- Time Input -->
+        <div class="form-group">
+            <label for="time">Time Input:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+
+        <!-- Range Input -->
+        <div class="form-group">
+            <label for="range">Range Input (0-100):</label>
+            <input type="range" id="range" name="range" min="0" max="100" value="50">
+        </div>
+
+        <!-- Click Button / Submit Button -->
+        <button type="submit">Submit Form</button>
+        <button type="button" onclick="alert('Click Button Clicked!')">Click Button</button>
+        <button type="reset">Reset Form</button>
+    </form>
+</body>
+</html>
