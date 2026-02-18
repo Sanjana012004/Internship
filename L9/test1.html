@@ -1,0 +1,16 @@
+<script>
+function touchRock()
+    {
+        var userName = prompt("What is your name?", "Enter your name here.");
+
+        if (userName)        {
+            alert("It is good to meet you, " + userName + " ");
+            document.getElementById("rockImg").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpEBsrZUnBrDe4vTCFFSUREvD5u9gqil5nNw&s";
+        }
+    }
+
+</script>
+<body onload="alert('Hello, I am your pet rock!');">
+    <img id="rockImg" src="https://img.freepik.com/premium-vector/stone-cartoon-illustration-with-sad-face_309278-8347.jpg?w=360" alt="Pet Rock" onclick="touchRock()">
+</body>
+    
