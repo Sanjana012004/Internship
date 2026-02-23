@@ -1,0 +1,82 @@
+body {
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.nav-wrapper {
+    background-color: #ffff;
+    padding: 5px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    z-index: 1;
+}
+
+#icon {
+    max-width: 200px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-list li a {
+    color: #1b91db;
+    text-decoration: none;
+    padding: 22px;
+}
+
+.employee-list {
+    list-style: none;
+    display: inline-flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    background-color: #edeeef;
+    border-radius: 10px;
+}
+
+.employee-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.user-img {
+    float: left;
+    border: 2px solid #1b91db;
+    border-radius: 100px;
+    width: 84px;
+    height: 84px;
+}
+
+.employment-details {
+    display: block;
+    float: right;
+    margin-left: 20px;
+}
+
+.interviews {
+    margin: 1.5%;
+    width: 25%;
+    background-color: #edeeef;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.list-item {
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    border-radius: 5px;
+}
