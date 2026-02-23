@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Coaches HR System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-wrapper">
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item"><strong>Joe's Coaches</strong></li>
+                <li class="nav-item"><a href="#">Account</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="employees">
+        <h2>Employees</h2>
+        <div class="employee-list">
+            <div class="employee-card">
+                <div class="employment-details">
+                    <span class="name-format">Ashton Jacobs</span><br>
+                    <span>Developer</span><br>
+                    <span>Tech Department</span><br>
+                    <span>ajacobs@jcoaches.com</span><br>
+                    <span>£35000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="interviews">
+        <h2>Upcoming Interviews</h2>
+        <ul id="interview-list-holder" style="list-style: none; padding: 0;">
+            <li>
+                <div class="list-item">
+                    <h3>Marketing</h3>
+                    <p>Social Media Content Specialist</p>
+                    <button class="accept-btn">Accept</button>
+                    <button class="reject-btn">Reject</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div style="padding: 20px;">
+        <button class="btn" onclick="showAddEmpModal()">Add Employee</button>
+        <button class="btn" onclick="showAddIntModal()">Add Interview</button>
+    </div>
+
+    <div id="employeeModal" class="modal" style="display:none;">
+        <div class="modal-header">Add Employee</div>
+        <div class="modal-container">
+            <input type="text" id="name" placeholder="First Name"><br>
+            <input type="text" id="surname" placeholder="Last Name"><br>
+            <input type="text" id="position" placeholder="Position"><br>
+            <input type="text" id="department" placeholder="Department"><br>
+            <input type="text" id="email" placeholder="Email"><br>
+            <input type="text" id="salary" placeholder="Salary"><br>
+            <button id="confirmBtn" onclick="addEmployee()">Confirm</button>
+            <button onclick="document.getElementById('employeeModal').style.display='none'">Cancel</button>
+        </div>
+    </div>
+
+    <div id="interviewModal" class="modal" style="display:none;">
+        <div class="modal-header">Add Interview</div>
+        <div class="modal-container">
+            <input type="text" id="int-department" placeholder="Department"><br>
+            <input type="text" id="int-position" placeholder="Position"><br>
+            <button id="confirmIntBtn" onclick="addInterview()">Confirm</button>
+            <button onclick="document.getElementById('interviewModal').style.display='none'">Cancel</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

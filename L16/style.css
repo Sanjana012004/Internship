@@ -1,0 +1,69 @@
+[cite_start]/* General Layout [cite: 231-250] */
+.nav-wrapper {
+    background-color: #ffffff;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 2px 5px #ccc;
+    z-index: 1;
+}
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+[cite_start]/* Employee Cards [cite: 274-284] */
+.employee-list {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #edeeef;
+    padding: 20px;
+    border-radius: 10px;
+}
+.employee-card {
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ccc;
+    width: 250px;
+}
+.name-format {
+    color: #1b91db;
+    font-weight: bold;
+}
+
+[cite_start]/* Modals [cite: 338-353] */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: white;
+    border: 2px solid #1b91db;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 10;
+    text-align: center;
+}
+.modal-header {
+    background-color: #1b91db;
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 8px 8px 0 0;
+}
+
+[cite_start]/* Buttons [cite: 315-337, 407-420] */
+.btn, .accept-btn, #confirmBtn {
+    background-color: #1b91db;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.accept-btn { background-color: #36bc65; margin-right: 5px; }
+.reject-btn { background-color: #ff0000; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
