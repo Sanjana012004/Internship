@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Car Wash - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+  <div class="bg-container">
+
+    <!-- Background banner -->
+    <div class="bg-img"></div>
+
+    <!-- Login Card -->
+    <div class="container">
+      <h1>LOG IN</h1>
+      <form id="login-form" action="" method="post">
+        <div class="tbox">
+          <input id="uname" type="text" name="" value="" placeholder="Username">
+        </div>
+        <div class="tbox">
+          <input id="pwd" type="password" name="" value="" placeholder="Password">
+        </div>
+        <input class="btn" type="submit" name="" value="LOGIN" onclick="validateLogin()">
+      </form>
+      <a class="b1" href="#">FORGOT PASSWORD?</a>
+      <a class="b2" href="#">CREATE AN ACCOUNT</a>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal" id="error-modal">
+      <div class="modal-header">
+        <div class="alert-icon">!</div>
+      </div>
+      <p>Incorrect username or password</p>
+      <button class="btn" type="button" name="button" onclick="dismissModal()">TRY AGAIN</button>
+    </div>
+
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

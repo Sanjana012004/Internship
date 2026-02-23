@@ -1,0 +1,327 @@
+/* ===========================
+   GLOBAL
+=========================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===========================
+   LOGIN PAGE
+=========================== */
+.login-body {
+  background: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Simulated background banner (replaces car-wash-bg4.jpg) */
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(135deg, #1b1b1b, #42d4f5);
+}
+
+/* Login card */
+.container {
+  width: 360px;
+  height: 600px;
+  background: linear-gradient(160deg, #1b1b1bcc, #333333cc);
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  border-radius: 14px;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.container h1 {
+  font-size: 40px;
+  margin-top: 12px;
+  margin-bottom: 60px;
+  color: white;
+  letter-spacing: 4px;
+}
+
+.tbox {
+  width: 260px;
+  height: 40px;
+  background: #f1f1f1b3;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 10px auto;
+  transition: 0.25s;
+}
+
+.tbox input {
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 90%;
+  line-height: 37px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.tbox:hover {
+  border-color: #42d4f5;
+}
+
+.btn {
+  width: 260px;
+  height: 40px;
+  background: #42d4f5;
+  border-radius: 10px;
+  margin: 14px auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s all;
+  display: block;
+}
+
+.btn:hover {
+  background: #525354;
+}
+
+.b1 {
+  display: block;
+  width: 260px;
+  padding: 10px 0;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin: auto;
+  transition: 0.4s all;
+}
+
+.b1:hover {
+  background: #525354;
+  padding: 12px 2px;
+  border-radius: 10px;
+}
+
+.b2 {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.4s all;
+  color: #42d4f5;
+}
+
+.b2:hover {
+  background: #525354;
+  padding: 12px 2px;
+  border-radius: 10px;
+}
+
+/* ===========================
+   MODAL (Error Popup)
+=========================== */
+.modal {
+  display: none; /* hidden by default - JS controls this */
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  z-index: 999;
+  min-width: 280px;
+}
+
+.modal-header {
+  margin-bottom: 16px;
+}
+
+/* Alert icon (replaces alert_icon.png image) */
+.alert-icon {
+  width: 80px;
+  height: 80px;
+  background: #e74c3c;
+  border-radius: 50%;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 80px;
+  margin: 0 auto;
+}
+
+.modal p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   HOME PAGE
+=========================== */
+.home-body {
+  background-color: #f1f1f1;
+  margin: 0;
+}
+
+/* Top Navbar */
+.nav-main {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-toggle-nav {
+  width: 60px;
+  height: 60px;
+  background-color: #f98f39;
+  color: white;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  user-select: none;
+}
+
+.btn-toggle-nav:hover {
+  background-color: #42d4f5;
+}
+
+.nav-main ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-main ul li {
+  list-style: none;
+  line-height: 60px;
+}
+
+.nav-main ul li a {
+  display: block;
+  height: 100%;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.nav-main ul li a:hover {
+  color: #42d4f5;
+}
+
+/* Sidebar */
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  bottom: 0;
+  width: 60px;
+  padding: 0 5px;
+  height: calc(100vh - 60px);
+  background-color: #1b1b1b;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.nav-sidebar.open {
+  width: 200px;
+}
+
+.nav-sidebar ul {
+  padding-top: 15px;
+  margin: 0;
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+.nav-sidebar ul li {
+  line-height: 60px;
+  list-style: none;
+}
+
+.nav-sidebar ul li a {
+  display: block;
+  height: 60px;
+  padding: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.nav-sidebar ul li a:hover {
+  background-color: #525354;
+}
+
+/* Main content area */
+main {
+  margin-left: 70px;
+  margin-top: 80px;
+  padding: 20px;
+  transition: margin-left 0.5s ease-in-out;
+}
+
+main h1 {
+  color: #1b1b1b;
+  font-size: 32px;
+}
+
+main p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
